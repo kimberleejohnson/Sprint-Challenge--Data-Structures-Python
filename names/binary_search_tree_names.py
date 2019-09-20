@@ -31,3 +31,26 @@ class BinarySearchTree:
                 self.left = insert(item)
 
     # Method to search, which we'll use to search through names 
+    def search(self, target): 
+        # Target is immediately the current value 
+        if self.value == target: 
+            return True 
+        
+        # Right side 
+        if self.value < target: 
+            # If the target is greater than the right value, and you can't keep going, return false, know item is not in list 
+            if self.right is None: 
+                return False 
+            # If the target is greater than the right value, and you can keep going, keep going
+            else: 
+                return self.right.search(target)  
+
+        # Left side 
+        it self.value > target: 
+            # If the target is less than the left value, and you can't keep going, return false 
+            if self.left is None: 
+                return False 
+            # If the target is less than the left value, and you can keep going left, keep going 
+            else: 
+                return self.left.search(target)
+        
