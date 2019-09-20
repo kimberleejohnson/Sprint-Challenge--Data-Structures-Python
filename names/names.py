@@ -39,6 +39,8 @@ end_time = time.time()
 run_time = end_time - start_time 
 print("Run-time (in seconds): ")
 print(run_time)
+print("Number of duplicates:")
+print(len(duplicates))
 
 ## Original code 
 #Empty duplicates data structure 
