@@ -19,7 +19,7 @@ class BinarySearchTree:
                 self.right = BinarySearchTree(item)
             # Item to insert is greater than current, so keep moving to right, recursively call function 
             else: 
-                self.right = insert(item)
+                self.right.insert(item)
 
         # Left side 
         else: 
@@ -28,7 +28,7 @@ class BinarySearchTree:
                 self.left = BinarySearchTree(item)
             # Item to insert is less than the current, so keep moving to left 
             else: 
-                self.left = insert(item)
+                self.left.insert(item)
 
     # Method to search, which we'll use to search through names 
     def search(self, target): 
@@ -46,7 +46,7 @@ class BinarySearchTree:
                 return self.right.search(target)  
 
         # Left side 
-        it self.value > target: 
+        if self.value > target: 
             # If the target is less than the left value, and you can't keep going, return false 
             if self.left is None: 
                 return False 
