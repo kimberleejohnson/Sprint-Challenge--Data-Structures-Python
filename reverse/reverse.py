@@ -1,3 +1,13 @@
+## What do I know about linked lists? 
+# Useful data structure if will be adding or deleting things a lot
+# Terrible at finding specific items
+# BaseCS analogy: like if we're putting things in boxes in a house, vs. in drawers all next to each other 
+# Each item points to the next value, but NOT the past value...that would be a doubly linked list 
+# Tail points to none 
+# Per before hours, I should think about *pointing*, not about *moving* 
+# This means I can probably think about changing pointers in reverse, like: 
+  # 1 -> 2 -> 3 -> 4 becomes just 1 <- 2 <- 3 <-4  
+
 class Node:
   def __init__(self, value=None, next_node=None):
     # the value at this linked list node
@@ -42,6 +52,24 @@ class LinkedList:
     # if we've gotten here, then the target node isn't in our list
     return False
 
+  # 1 -> 2 -> 3 -> 4 becomes just 1 <- 2 <- 3 <-4  
   def reverse_list(self):
-    # TO BE COMPLETED
-    pass
+    # Variable to store previous node 
+    prev_node = None
+    # Start at the head 
+    current_node = self.head 
+    
+    # While the current node is not None 
+    # Until we iterate through the whole list 
+    while current_node is not None: 
+      # Store a variable for what the current node _used_ to point to 
+      temp_next = current_node.next_node 
+      # Reset the current_node.next to point to the previous node 
+      current_node.next_node = prev_node 
+      # Set the previous node to the current_node 
+      prev_node = current_node
+      # Reset the current_node to the next node in the list that was stored as a temp variable
+      current_node = temp_next 
+    # When you're done with the list, reset the head 
+    self.head = prev_node 
+    
