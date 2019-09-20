@@ -33,13 +33,12 @@ for name in names_2:
         # If it does, then we will append to duplicates array
         duplicates.append(name)
 
-
 # Ending time tracker 
 end_time = time.time()
 
-# Print statements 
-print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
-print (f"runtime: {end_time - start_time} seconds")
+run_time = end_time - start_time 
+print("Run-time (in seconds): ")
+print(run_time)
 
 ## Original code 
 #Empty duplicates data structure 
