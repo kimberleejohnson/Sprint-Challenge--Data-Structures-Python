@@ -1,3 +1,11 @@
+## What do I know about linked lists? 
+# Useful data structure if will be adding or deleting things a lot
+# Terrible at finding specific items
+# BaseCS analogy: like if we're putting things in boxes in a house, vs. in drawers all next to each other 
+# Each item points to the next value, but NOT the past value...that would be a doubly linked list 
+# Tail points to none 
+# Per before hours, I should think about *pointing*, not about *moving* 
+
 class Node:
   def __init__(self, value=None, next_node=None):
     # the value at this linked list node
