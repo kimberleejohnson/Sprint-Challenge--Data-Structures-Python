@@ -1,3 +1,7 @@
+## Original runtime complexity: 
+# Big O(n^2), because...
+# I see a for loop within a for loop! Which immediately clues me into the fact that this code is inefficient. Then, as I learned when I got this wrong on the Sprint Challenge last week, I should look at what each iteration in the for loop is actually doing. The first for loop checks every name in name_1, so the speed of that depends on n, the number of names in the list. The next for loop also checks for every name in names_2, so depends on the number of names in the list, also n. So, we have n*n complexity, or n^2. 
+
 import time
 
 start_time = time.time()
